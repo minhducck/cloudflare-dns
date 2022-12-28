@@ -10,7 +10,9 @@
     "url": "https://duckonemorec.me/"
   },
   "scripts": {
-    "run": "node src/index.js"
+    "run": "node src/index.js",
+    "bundle": "npx esbuild ./src/index.js  --bundle --outfile=./releases/build.cjs --format=cjs --platform=node",
+    "build": "yarn bundle && npx pkg -t node14-linux ./releases/build.cjs -o ./cloudflare-dns"
   },
   "dependencies": {
     "axios": "^1.2.1",
