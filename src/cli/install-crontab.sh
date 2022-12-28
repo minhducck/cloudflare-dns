@@ -1,2 +1,3 @@
-crontab -l | { cat; echo "*/5 * * * * $(which node) $(readlink -f $( dirname -- "$0")/../index.js)"; } | crontab -
-crontab -l | { cat; echo "@reboot $(which node) $(readlink -f $( dirname -- "$0")/../index.js)"; } | crontab -
+ROOT=$(readlink -f "$( dirname -- "$0")/../../");
+crontab -l | { cat; echo "*/5 * * * * cd $ROOT; $(which node) ./src/index.js >> $ROOT/run.log"; } | crontab -
+crontab -l | { cat; echo "@reboot cd $ROOT; $(which node) ./src/index.js >> $ROOT/run.log"; } | crontab -

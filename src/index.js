@@ -30,6 +30,7 @@ const main = async () => {
         process.exit(CLI_CLOUDFLARE_ACCESS_KEY_ERROR_CODE);
     }
 
+    console.log(`Update DNS ${CONFIGURATION['CLOUDFLARE_DOMAIN_RECORDS']} to ${wanIP} successfully.`)
     process.exit(CLI_SUCCESS_CODE);
 }
 
