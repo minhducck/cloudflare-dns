@@ -1,0 +1,19 @@
+{
+  "name": "cloudflare-dns",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "type": "module",
+  "author": {
+    "email": "minhducck@gmail.com",
+    "name": "Ta Minh Duc",
+    "url": "https://duckonemorec.me/"
+  },
+  "scripts": {
+    "run": "node src/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.2.1",
+    "dotenv": "^16.0.3"
+  }
+}

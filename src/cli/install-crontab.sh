@@ -1,0 +1,2 @@
+crontab -l | { cat; echo "*/5 * * * * $(which node) $(readlink -f $( dirname -- "$0")/../index.js)"; } | crontab -
+crontab -l | { cat; echo "@reboot $(which node) $(readlink -f $( dirname -- "$0")/../index.js)"; } | crontab -
